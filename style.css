@@ -1,50 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
+/* ===== Global Reset ===== */
+* {
     margin: 0;
-    background: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
+/* ===== Base ===== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* ===== Header ===== */
 header {
-    background: #1f2937;
+    background: linear-gradient(135deg, #111827, #1f2937);
     color: white;
-    padding: 60px 20px;
     text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .role {
     font-size: 18px;
-    margin-top: 10px;
-    color: #d1d5db;
+    color: #cbd5e1;
+    margin-bottom: 15px;
 }
 
 .summary {
-    max-width: 700px;
-    margin: 20px auto;
-    color: #e5e7eb;
-}
-
-/* Layout */
-.container {
-    max-width: 900px;
+    max-width: 750px;
     margin: auto;
-    padding: 40px 20px;
+    color: #e5e7eb;
+    font-size: 16px;
 }
 
-/* Button */
+/* ===== Buttons ===== */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
+    margin-top: 20px;
+    padding: 12px 20px;
     background: #3b82f6;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-/* Skills */
+.btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* ===== Section Headings ===== */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+/* ===== Skills ===== */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -53,23 +82,61 @@ header {
 
 .grid span {
     background: #e0e7ff;
-    padding: 8px 12px;
-    border-radius: 5px;
+    color: #1e3a8a;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-/* Projects */
+/* ===== Cards ===== */
 .card {
-    background: white;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 22px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Footer */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ===== Links ===== */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Contact Section ===== */
+#contact a {
+    color: #2563eb;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #1f2937;
-    color: white;
+    padding: 25px;
+    background: #111827;
+    color: #9ca3af;
+    margin-top: 40px;
+    font-size: 14px;
 }

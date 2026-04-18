@@ -4,7 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonali Tupe | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background: #f7f7f7;
+        }
+
+        header, section, footer {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .grid span {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            margin-top: 15px;
+        }
+
+        .tab-btn {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: bold;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn.active {
+            border-bottom: 3px solid #007bff;
+            color: #007bff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        img {
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,7 +103,7 @@
 <header>
     <div class="container">
         <h1>Sonali Tupe</h1>
-        <p class="role">Software Test Engineer | QA Automation | Aspiring Web Developer</p>
+        <p class="role">Software Test Engineer | QA Automation | Web Developer (Learning & Building)</p>
 
         <p class="summary">
             Results-driven Software Test Engineer with 7+ years of experience in manual and automation testing,
@@ -31,6 +122,15 @@
     </p>
 </section>
 
+<section class="container">
+    <h2>Purpose</h2>
+    <p>
+        I am passionate about using technology to support meaningful social initiatives, especially those focused
+        on inclusivity, education, and community impact. I am keen to contribute my skills to organizations that
+        create positive change.
+    </p>
+</section>
+
 <section class="container" id="skills">
     <h2>Technical Skills</h2>
     <div class="grid">
@@ -45,32 +145,98 @@
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="container" id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
-        <h3>Automation Testing Framework</h3>
-        <p>Built a Selenium + Java + TestNG framework for web application testing.</p>
-        <a href="#" target="_blank">GitHub Repo</a>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('portfolio')">Portfolio Website</button>
+        <button class="tab-btn" onclick="openTab('swag')">SwagsLab Automation</button>
+        <button class="tab-btn" onclick="openTab('api')">API Testing Suite</button>
     </div>
 
-    <div class="card">
-        <h3>API Testing Suite</h3>
-        <p>Postman-based API test collection covering CRUD operations and validations.</p>
-        <a href="#" target="_blank">GitHub Repo</a>
+    <!-- Tab 1 -->
+    <div id="portfolio" class="tab-content active">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>
+                The website is developed using HTML, CSS, and JavaScript and serves as a central place to present my GitHub projects,
+                technical expertise, and professional background in QA automation.
+            </p>
+            <img src="portfolio.png" alt="Portfolio" width="100%">
+            <br>
+            <a href="https://github.com/SonaliTupe16/portfolio-website" target="_blank">View Code</a>
+        </div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div id="swag" class="tab-content">
+        <div class="card">
+            <h3>SwagsLab Automation Testing</h3>
+            <p>Built a Selenium + Java + TestNG framework for web application testing.</p>
+            <img src="Swagslab.png" alt="Swag Labs Report" width="100%">
+            <br>
+            <a href="https://github.com/SonaliTupe16/SwagsLabAutomation" target="_blank">View Code</a>
+        </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="api" class="tab-content">
+        <div class="card">
+            <h3>DemoAPIAutomationFramework</h3>
+            <p>Developed a REST API automation framework using Java and TestNG with layered architecture.
+                Framework includes authentication services, request/response models, logging filters,
+                test listeners, and automated validation for Login, Account Creation, Profile Retrieval,
+                and Profile Update APIs.</p>
+            <a href="https://github.com/SonaliTupe16/DemoAPIAutomationFramework" target="_blank">View Code</a>
+        </div>
     </div>
 </section>
 
 <section class="container" id="contact">
     <h2>Contact</h2>
-    <p>Email: sonalitupe16@gmail.com</p>
-    <p>LinkedIn: https://www.linkedin.com/sonalitupe</p>
-    <p>GitHub: https://github.com/SonaliTupe16</p>
+
+    <p>
+        Email:
+        <a href="mailto:sonalitupe16@gmail.com">sonalitupe16@gmail.com</a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/sonalitupe" target="_blank">
+            linkedin.com/sonalitupe
+        </a>
+    </p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/SonaliTupe16" target="_blank">
+            github.com/SonaliTupe16
+        </a>
+    </p>
 </section>
 
 <footer>
     <p>© 2026 Sonali Tupe</p>
 </footer>
+
+<script>
+    function openTab(tabId) {
+        // hide all tabs
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(tab => tab.classList.remove('active'));
+
+        // remove active class from buttons
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // show selected tab
+        document.getElementById(tabId).classList.add('active');
+
+        // highlight clicked button
+        event.target.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
